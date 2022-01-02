@@ -99,7 +99,7 @@ export default {
   min-width: 800px;
   border-bottom: 0.5px solid rgba(75, 70, 70, 0.3);
   box-shadow: 0px 2px 20px 2px rgba(145, 145, 144, 0.5);
-  background-color: rgba(255, 255, 255, 0.493);
+  background-color: rgba(255, 255, 255, 1);
   z-index: 9999;
   position: absolute;
   .label {
