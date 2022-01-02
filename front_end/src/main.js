@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Antd from 'ant-design-vue'
+import Antd, {message} from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 import store from './store'
 import '@/permission'
@@ -28,3 +28,9 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+message.config({
+  duration: 5,// 持续时间
+  top:`60px`, // 到页面顶部距离
+  maxCount: 3 // 最大显示数, 超过限制时，最早的消息会被自动关闭
+})
