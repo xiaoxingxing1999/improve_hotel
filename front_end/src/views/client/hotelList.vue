@@ -15,6 +15,7 @@
     <div class="search-info">
       <a-row type="flex" justify="space-between" align="middle">
         <a-col :span="7">
+          <span style="margin-right: 10px">房间类型 </span>
           <a-select
             :span="7"
             mode="multiple"
@@ -24,10 +25,10 @@
           >
             <a-select-option v-for="item in filteredRoomTypes" :key="item" :value="item">{{ item }}</a-select-option>
           </a-select>
-          <span>房间类型</span>
         </a-col>
 
         <a-col :span="7">
+          <span style="margin-right: 10px">酒店服务</span>
           <a-select
             mode="multiple"
             placeholder="选择酒店服务"
@@ -36,10 +37,10 @@
           >
             <a-select-option v-for="item in filteredServes" :key="item" :value="item">{{ item }}</a-select-option>
           </a-select>
-          <span>酒店服务</span>
         </a-col>
 
         <a-col :span="7">
+          <span style="margin-right: 10px">酒店星级</span>
           <a-select
             mode="multiple"
             placeholder="选择酒店星级"
@@ -48,7 +49,6 @@
           >
             <a-select-option v-for="item in filteredStars" :key="item" :value="item">{{ item }}</a-select-option>
           </a-select>
-          <span>酒店星级</span>
         </a-col>
       </a-row>
 
