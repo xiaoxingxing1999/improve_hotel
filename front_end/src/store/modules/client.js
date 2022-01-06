@@ -30,6 +30,7 @@ const client = {
             state.registerVIPVisible = data
         },
         set_orderMatchCouponList: function(state, data) {
+
             state.orderMatchCouponList = data
         },
 

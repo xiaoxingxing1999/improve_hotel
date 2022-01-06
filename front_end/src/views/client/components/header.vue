@@ -16,6 +16,10 @@
         <a-icon type="user" />
 订单管理
       </a-menu-item>
+      <a-menu-item key="help" @click="jumpToHelp" class="toHelp">
+        <a-icon type="user" />
+        用户帮助
+      </a-menu-item>
     </a-menu>
     <div class="logout">
       <a-dropdown placement="bottomCenter">
@@ -54,6 +58,8 @@ export default {
             res=["info"]
         }else if(this.$route.path==='/client/orders'){
             res=["order"]
+        }else if(this.$route.path==='/client/help'){
+          res=["help"]
         }
         else if(/orderDetail/.test(this.$route.path)){
             res=["order"]
@@ -83,6 +89,10 @@ export default {
     },
     jumpToOrders() {
       router.push("/client/orders");
+    },
+    jumpToHelp() {
+
+      router.push("/client/help");
     }
   }
 };

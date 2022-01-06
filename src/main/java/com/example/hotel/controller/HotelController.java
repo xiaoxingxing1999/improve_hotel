@@ -34,6 +34,7 @@ public class HotelController {
         System.out.println("POST./api/hotel/search?timeStart=" + timeStart + "&timeEnd=" + timeEnd + "&star=" + star
                 + "&lowerPrice=" + lowerPrice + "&highPrice=" + highPrice + "&roomType=" + roomType + "&rate=" + rate
                 + "&name=" + name + "&serves=" + serves);
+
         return SimpleResponse.ok(hotelService.findHotelsInCondition(timeStart, timeEnd, star, lowerPrice, highPrice,
                 roomType, rate, name ,serves));
     }

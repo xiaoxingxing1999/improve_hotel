@@ -152,6 +152,11 @@ const routes = [{
         component: () => import('@/views/client/orders')
       },
       {
+        path: '/client/help',
+        name: 'help',
+        component: () => import('@/views/client/help')
+      },
+      {
         path: '/client/orderDetail/:orderId',
         name: 'orderDetail',
         component: () => import('@/views/client/orderDetail')

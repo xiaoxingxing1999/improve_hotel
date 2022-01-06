@@ -293,6 +293,8 @@ export default {
           this.addOrder(data);
           this.form.resetFields();
           this.set_orderMatchCouponList([]);
+          //insert
+          this.$router.push("/client/orders");
         }
       });
     }

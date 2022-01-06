@@ -266,6 +266,7 @@ export default {
         { force: true },
         async (err, values) => {
           if (!err) {
+
             this.registerLoading = true;
             const data = {
               email: this.form.getFieldValue("registerUserMail"),
@@ -277,14 +278,18 @@ export default {
               // userType: 'Client'
             };
             await this.register(data).then(() => {
-              this.customActiveKey = "tab1";
+              this.customActiveKey = "tab2";
               this.form.setFieldsValue({
                 registerUserMail: "",
                 registerPassword: "",
-                registerPasswordconfirm: ""
+                registerPasswordconfirm: "",
+                registerPhoneNumber:"",
+                registerUsername:""
               });
             });
+
             this.registerLoading = false;
+
           }
         }
       );
