@@ -200,7 +200,7 @@ export default {
       if(!/^[0-9a-zA-Z]*$/.test(value)){
         callback(new Error("密码只能由数字字母构成"));
       }
-      callback();
+      callback("填写成功");
     },
     handlePasswordCheck(rule, value, callback) {
       const password = this.form.getFieldValue("registerPassword");
@@ -211,7 +211,7 @@ export default {
       if (value && password && value.trim() !== password.trim()) {
         callback(new Error("两次密码不一致"));
       }
-      callback();
+      callback("两次密码一致");
     },
     handleTabClick(key) {
       this.customActiveKey = key;
